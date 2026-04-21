@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { generateLuckyAddress } from '../src/index';
+
+import { generateLuckyAddress } from '../ts/index';
 
 describe('Address Generation with Known Vectors', () => {
   it('generates correct addresses for standard test vector', async () => {

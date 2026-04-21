@@ -1,5 +1,5 @@
 {
-  "name": "Slip10 Universal",
+  "name": "Lucky Address",
   "description": "A lightweight, universally compatible, and tree-shakable SLIP-10 implementation for HD wallets supporting multiple curves including ed25519 and secp256k1.",
   "requestFramePermissions": [],
   "majorCapabilities": []
