@@ -1,0 +1,58 @@
+{
+  "name": "luckyaddress",
+  "version": "1.0.0",
+  "description": "Universal SLIP-10 implementation for multiple curves",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./hdkey/*": {
+      "import": "./dist/hdkey/*.js",
+      "types": "./dist/hdkey/*.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "concurrently \"tsup --watch\" \"npm run dev --prefix vite\"",
+    "build": "tsup",
+    "preview": "npm run preview --prefix vite",
+    "clean": "rm -rf dist vite/dist",
+    "lint": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@noble/curves": "^2.2.0",
+    "@noble/hashes": "^2.2.0",
+    "@noble/secp256k1": "^3.1.0",
+    "@polkadot/util-crypto": "^14.0.3",
+    "@polkadot/wasm-crypto": "^7.5.4",
+    "@scure/base": "^2.0.0",
+    "@scure/bip39": "^2.0.1"
+  },
+  "devDependencies": {
+    "@google/genai": "^1.29.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.14",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "vitest": "^4.1.4"
+  }
+}
