@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "concurrently \"tsup --watch\" \"vite\"",
     "build": "tsup",
-    "build:web": "tsc -b && vite build",
+    "build:web": "tsup && tsc -b && vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist vite/dist",
     "lint": "tsc --noEmit",
@@ -49,5 +49,6 @@
     "typescript": "~6.0.2",
     "vite": "^8.0.9",
     "vitest": "^4.1.4"
-  }
+  },
+  "packageManager": "pnpm@10.33.0"
 }
